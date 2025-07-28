@@ -1,0 +1,17 @@
+.day-card-list {
+  display: flex;
+  gap: 1px;
+}
+
+.stat-data {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-bottom: 70px;
+}
+
+.stat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

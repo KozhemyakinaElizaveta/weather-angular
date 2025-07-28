@@ -1,0 +1,16 @@
+<div class="city-select">
+    <div *ngIf="isEdited" class="city-input">
+      <app-input
+      [value]="inputValue"
+      (valueChange)="inputValue = $event"
+      placeholder="Введите город"
+      (keyup.enter)="select()"
+      #inputElement
+    />
+      <app-button (click)="select()">Сохранить</app-button>
+    </div>
+    <app-button *ngIf="!isEdited" (click)="edit()">
+      <app-location-icon/>
+      Изменить город
+    </app-button>
+  </div>

@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right {
+  background: var(--color-bg-main);
+  padding: 60px 50px;
+  border-radius: 0 25px 25px 0;
+}
+.left {
+  width: 500px;
+  height: 680px;
+  border-radius: 30px;
+  background-image: url(/assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,24 @@
+<app-error *ngIf="error" [error]="errorDisplay" />
+
+<div *ngIf="data" class="stat-data">
+  <div class="stat-list">
+    <app-stat 
+      *ngFor="let item of statData" 
+      [label]="item.label" 
+      [stat]="item.stat">
+    </app-stat>
+  </div>
+  
+  <div class="day-card-list">
+    <app-day-card
+      *ngFor="let item of data.forecast.forecastday; let i = index"
+      [weatherCode]="item.day.condition.code"
+      [temp]="item.day.avgtemp_c"
+      [date]="item.date"
+      [isActive]="activeIndex === i"
+      (click)="onDayCardClick(i)">
+    </app-day-card>
+  </div>
+</div>
+
+<app-city-select (cityChange)="onCitySelect($event)"></app-city-select>

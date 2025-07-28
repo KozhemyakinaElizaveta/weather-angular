@@ -1,0 +1,10 @@
+<button class="day-card" [class.active]="isActive">
+  <app-sun-icon *ngIf="weatherCode <= 1003" [color]="iconColor" />
+  <app-cloud-icon 
+    *ngIf="weatherCode >= 1006 && weatherCode < 1063" 
+    [color]="iconColor" />
+  <app-rain-icon *ngIf="weatherCode >= 1063" [color]="iconColor" />
+  
+  <div class="day-card__day">{{ formattedDate }}</div>
+  <div class="day-card__temp">{{ temp }} °C</div>
+</button>

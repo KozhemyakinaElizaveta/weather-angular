@@ -1,0 +1,27 @@
+<div class="paneLeft">
+  <div>
+    <div class="day">
+      {{ day }}
+    </div>
+    <div class="date">
+      {{ date }}
+    </div>
+    <div class="city">
+      <app-location-icon />
+      {{ city }}
+    </div>
+  </div>
+  <div>
+    <div class="wetherIcon">
+      <app-sun-icon *ngIf="weatherCode <= 1003" [size]="95" />
+      <app-cloud-icon *ngIf="weatherCode >= 1006 && weatherCode < 1063" [size]="95" />
+      <app-rain-icon *ngIf="weatherCode >= 1063" [size]="95" />
+    </div>
+    <div class="temp">
+      {{ dayData.day.avgtemp_c }}
+    </div>
+    <div class="condition">
+      {{ dayData.day.condition.text }}
+    </div>
+  </div>
+</div>
